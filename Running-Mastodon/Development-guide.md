@@ -93,10 +93,15 @@ These are self-contained instructions for setting up a development environment o
 - Configure [PostgreSQL](https://www.postgresql.org):
 
 	```
+	# create PostgreSQL database cluster
 	initdb /usr/local/var/postgres -E utf8
+	# create new database, database name is system user name
 	createdb
+	# configure directory which all PostgreSQL data are stored in
 	export PGDATA=/usr/local/var/postgres
+	# start database server process
 	/usr/local/bin/postgres
+	# start PostgreSQL interactive terminal
 	/usr/local/bin/psql
 	```
 
@@ -106,6 +111,7 @@ These are self-contained instructions for setting up a development environment o
 	CREATE USER mastodon CREATEDB;
 	\q
 	```
+`¥q`: quit PostgreSQL terminal
 
 ### Installation
 
